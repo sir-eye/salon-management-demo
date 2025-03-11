@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Employees - Leah’s Beauty Bar</title>
+  <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+
+<div th:replace="fragments/nav :: nav"></div>
+
+<main>
+  <h1>Employee Directory</h1>
+
+  <table>
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Role</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="employee : ${employees}">
+      <td th:text="${employee.id}">1</td>
+      <td th:text="${employee.name}">John Doe</td>
+      <td th:text="${employee.role}">Esthetician</td>
+      <td>
+        <a th:href="@{'/employees/edit/' + ${employee.id}}">Edit</a> |
+        <a th:href="@{'/employees/delete/' + ${employee.id}}">Delete</a>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+  <a th:href="@{/employees/add}">Add Employee</a>
+</main>
+
+<div th:replace="fragments/footer :: footer"></div>
+
+<script th:src="@{/js/scripts.js}"></script>
+</body>
+</html>

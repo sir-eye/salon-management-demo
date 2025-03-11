@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Home - Leah’s Beauty Bar</title>
+  <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+
+<div th:replace="fragments/nav :: nav"></div>
+
+<main>
+  <h1>Welcome to Leah’s Beauty Bar</h1>
+  <p>Your trusted beauty salon management system.</p>
+</main>
+
+<div th:replace="fragments/footer :: footer"></div>
+
+<script th:src="@{/js/scripts.js}"></script>
+</body>
+</html>
