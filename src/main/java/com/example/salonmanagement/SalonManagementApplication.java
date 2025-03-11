@@ -1,4 +1,4 @@
-package com.salon.management;
+package com.example.salonmanagement;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,5 +9,4 @@ public class SalonManagementApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SalonManagementApplication.class, args);
 	}
-
 }

@@ -1,4 +1,4 @@
-package com.salon.management;
+package com.example.salonmanagement;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
